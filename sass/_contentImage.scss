@@ -1,0 +1,463 @@
+.content-image {
+  height: 804.706px;
+  background: url("/image/headerTravel.png") no-repeat top center / 100%;
+  .content-text {
+    top: 400px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    .content-title {
+      color: $white-color;
+      text-align: center;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+      font-family: Lora;
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%; /* 43.2px */
+      letter-spacing: 0.25px;
+      margin-bottom: 2px;
+    }
+    .content-heading {
+      color: $white-color;
+      text-align: center;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      font-family: Open Sans;
+      font-size: 72px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 120%; /* 86.4px */
+      .Contrast {
+        color: $Contrast-color;
+      }
+      .line {
+        transform: translate(-168px, -44px);
+      }
+    }
+    .content-line {
+      transform: translate(53px, -40px);
+    }
+    .btn-START {
+      transform: translate(-178px, 10px);
+      border-radius: 4px;
+      background: $Contrast-color;
+      display: inline-flex;
+      padding: 8px 10px;
+      justify-content: center;
+      align-items: center;
+
+      color: $white-color;
+      text-align: center;
+      /* open sans/button */
+      font-family: $secondary-font;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 120%; /* 16.8px */
+      letter-spacing: 0.175px;
+      &:hover {
+        box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+      }
+    }
+  }
+  .from-content-image {
+    display: flex;
+    transform: translateY(745px);
+    justify-content: center;
+    margin: 0 auto;
+    .from-content {
+      max-width: 846px;
+      height: 140px;
+      background-color: $white-color;
+      border-radius: 12px;
+      box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
+      padding: 0 77px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .from-card-going {
+        margin-right: 8px;
+        max-width: 325px;
+        h5 {
+          margin-top: 18px;
+          color: $black100;
+          /* lora/subtitle */
+          font-family: $primary-font;
+          font-size: 19px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 120%; /* 20.4px */
+          letter-spacing: 0.15px;
+        }
+        .input-wrapper {
+          width: 100%;
+          margin-top: 8px;
+          display: flex;
+          align-items: center;
+          border-radius: 4px; /* Thêm border-radius cho input nếu cần */
+          height: 48px;
+          padding: 0px 8px;
+          flex-shrink: 0;
+          border-radius: 4px;
+          border: 0.5px solid $primary-color;
+          background: var(--white-100, #fff);
+          .icon {
+            width: 24px; /* Điều chỉnh kích thước biểu tượng theo ý muốn */
+            height: 25px;
+            margin-right: 8px; /* Khoảng cách giữa biểu tượng và input */
+          }
+
+          .input {
+            flex-grow: 1; /* Để input mở rộng để lấp đầy không gian còn lại trong label */
+            border: none; /* Loại bỏ border của input */
+            outline: none; /* Loại bỏ outline khi focus */
+          }
+        }
+      }
+      .from-card-date {
+        margin: 0 8px;
+        max-width: 250px;
+        h5 {
+          margin-top: 18px;
+          color: $black100;
+          /* lora/subtitle */
+          font-family: $primary-font;
+          font-size: 19px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 120%; /* 20.4px */
+          letter-spacing: 0.15px;
+        }
+        .input-wrapper {
+          margin-top: 8px;
+          display: flex;
+          align-items: center;
+          border-radius: 4px; /* Thêm border-radius cho input nếu cần */
+          display: flex;
+          width: 100%;
+          height: 48px;
+          padding: 0px 8px;
+          gap: 8px;
+          padding: 0px 8px;
+          flex-shrink: 0;
+          border: 0.5px solid $primary-color;
+
+          .input {
+            flex-grow: 1; /* Để input mở rộng để lấp đầy không gian còn lại trong label */
+            border: none; /* Loại bỏ border của input */
+            outline: none; /* Loại bỏ outline khi focus */
+            color: $black54;
+          }
+        }
+      }
+      .btn-Srearch {
+        margin-left: 8px;
+        height: 48px;
+        margin-top: 47px;
+        display: inline-flex;
+        padding: 12px 20px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        background: $primary-color;
+        color: $white-color;
+        text-align: center;
+        /* open sans/button */
+        font-family: $primary-font;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%; /* 16.8px */
+        letter-spacing: 0.175px;
+        &:hover {
+          box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .content-image {
+    height: 730px;
+
+    .content-text {
+      top: 240px;
+      .content-heading {
+        font-size: 64px;
+      }
+    }
+    .from-content-image {
+      transform: translateY(540px);
+    }
+  }
+}
+@media screen and (max-width: 768.98px) {
+  .content-image {
+    height: 440px;
+
+    .content-text {
+      top: 160px;
+      .content-title {
+        font-size: 30px;
+      }
+      .content-heading {
+        font-size: 48px;
+        .line {
+          transform: translate(-118px, -12px);
+          width: 130px;
+          height: 31px;
+        }
+      }
+      .content-line {
+        transform: translate(-5px, -28px);
+        width: 300px;
+      }
+      .btn-START {
+        transform: translate(0px, -1px);
+      }
+    }
+    .from-content-image {
+      transform: translateY(400px);
+      .from-content {
+        .from-card-going {
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600.98px) {
+  .content-image {
+    height: 440px;
+
+    .content-text {
+      top: 135px;
+      .content-title {
+        font-size: 24px;
+      }
+      .content-heading {
+        font-size: 36px;
+        .line {
+          transform: translate(-87px, -14px);
+          width: 106px;
+          height: 30px;
+        }
+      }
+      .content-line {
+        transform: translate(-5px, -28px);
+        width: 230px;
+      }
+      .btn-START {
+        transform: translate(5px, 0px);
+      }
+    }
+    .from-content-image {
+      transform: translateY(324px);
+      .from-content {
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);
+        padding: 0 30px;
+        height: 100px;
+
+        .from-card-going {
+          max-width: 200px;
+          margin-right: 4px;
+          .goging {
+            overflow: inherit;
+            padding-right: 8px;
+          }
+          h5 {
+            margin-top: -6px;
+            font-size: 17px;
+          }
+          .input-wrapper {
+            height: 36px;
+            .input {
+              font-size: 14px;
+            }
+          }
+        }
+        .from-card-date {
+          max-width: 150px;
+          margin: 0 4px;
+
+          h5 {
+            margin-top: -6px;
+            font-size: 17px;
+          }
+          .input-wrapper {
+            height: 36px;
+
+            .input {
+              font-size: 14px;
+            }
+          }
+        }
+        .btn-Srearch {
+          margin-top: 20px;
+          margin-left: 4px;
+          height: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 414.98px) {
+  .content-image {
+    height: 350px;
+
+    .content-text {
+      top: 90px;
+      .content-title {
+        font-size: 18px;
+      }
+      .content-heading {
+        font-size: 22px;
+        .line {
+          transform: translate(-56px, -5px);
+          width: 69px;
+          height: 36px;
+        }
+      }
+      .content-line {
+        transform: translate(-5px, -28px);
+        width: 170px;
+      }
+      .btn-START {
+        transform: translate(-1px, -13px);
+        padding: 4px 6px;
+        font-size: 13px;
+      }
+    }
+    .from-content-image {
+      transform: translateY(220px);
+      .from-content {
+        padding: 0 12px;
+        height: 90px;
+        width: 380px;
+
+        .from-card-going {
+          max-width: 150px;
+          margin-right: 4px;
+          .goging {
+            overflow: inherit;
+            padding-right: 8px;
+          }
+          h5 {
+            margin-top: -6px;
+            font-size: 14px;
+          }
+          .input-wrapper {
+            height: 36px;
+            .input {
+              font-size: 10px;
+              max-width: 55px;
+            }
+          }
+        }
+        .from-card-date {
+          max-width: 150px;
+          margin: 0 4px;
+
+          h5 {
+            margin-top: -6px;
+            font-size: 14px;
+          }
+          .input-wrapper {
+            height: 36px;
+
+            .input {
+              font-size: 10px;
+            }
+          }
+        }
+        .btn-Srearch {
+          margin-top: 20px;
+          margin-left: 4px;
+          height: 36px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375.98px) {
+  .content-image {
+    height: 320px;
+    .content-text {
+      top: 82px;
+
+      .content-title {
+        font-size: 16px;
+      }
+
+      .content-heading {
+        font-size: 20px;
+        .line {
+          transform: translate(-51px, -8px);
+          width: 50px;
+          height: 30px;
+        }
+      }
+      .content-line {
+        width: 130px;
+      }
+      .btn-START {
+        transform: translate(-1px, -21px);
+        padding: 4px 6px;
+        font-size: 11px;
+      }
+    }
+    .from-content-image {
+      transform: translateY(194px);
+      .from-content {
+        padding: 0 12px;
+        height: 90px;
+        width: 350px;
+
+        .from-card-going {
+          max-width: 100px;
+          margin-right: 4px;
+          .goging {
+            overflow: inherit;
+            padding-right: 8px;
+          }
+          h5 {
+            margin-top: -6px;
+            font-size: 12px;
+          }
+          .input-wrapper {
+            height: 36px;
+            .input {
+              max-width: 55px;
+
+              font-size: 10px;
+            }
+          }
+        }
+        .from-card-date {
+          max-width: 100px;
+          margin: 0 4px;
+
+          h5 {
+            margin-top: -6px;
+            font-size: 12px;
+          }
+          .input-wrapper {
+            height: 36px;
+
+            .input {
+              font-size: 10px;
+            }
+          }
+        }
+        .btn-Srearch {
+          margin-top: 20px;
+          margin-left: 4px;
+          height: 36px;
+        }
+      }
+    }
+  }
+}

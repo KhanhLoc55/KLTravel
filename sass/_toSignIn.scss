@@ -1,0 +1,216 @@
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  .modal_overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .modal_body {
+    display: flex;
+    justify-content: center;
+
+    max-width: 80rem;
+    width: 100%;
+    padding: 0 2rem;
+    margin: 0 auto;
+    .ion {
+      &-logo-behance {
+        font-size: 1.3rem;
+        line-height: inherit;
+        margin-right: 0.5rem;
+        color: $black100;
+      }
+      &-logo-google {
+        font-size: 1.3rem;
+        line-height: inherit;
+        margin-right: 0.5rem;
+        color: $Contrast-color;
+      }
+      &-logo-facebook {
+        font-size: 1.3rem;
+        line-height: inherit;
+        margin-right: 0.5rem;
+        color: $secondary-color;
+        margin-left: 0.8rem;
+      }
+    }
+
+    .text {
+      font-family: $primary-font;
+      line-height: inherit;
+      text-transform: unset;
+      text-rendering: optimizeLegibility;
+      margin-bottom: 16px;
+      &-large {
+        font-size: 2rem;
+        font-weight: 600;
+        color: $primary-color;
+      }
+
+      &-normal {
+        font-size: 1rem;
+        font-weight: 400;
+        color: $black100;
+      }
+
+      &-links {
+        font-size: 1rem;
+        font-weight: 400;
+        color: $secondary-color;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .toSignIn {
+      z-index: 99999999;
+      max-width: 28rem;
+      width: 100%;
+      margin: 2rem auto;
+      padding: 2rem 2.5rem;
+      border: none;
+      outline: none;
+      border-radius: 0.25rem;
+      color: $black100;
+      background: $white-color;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      position: relative;
+
+      .close {
+        cursor: pointer;
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        height: 30px;
+        width: 30px;
+        color: $primary-color;
+        border-radius: 50%;
+      }
+      .form {
+        width: 100%;
+        height: auto;
+        margin-top: 2rem;
+
+        .input-control {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 1.25rem;
+        }
+
+        .input-field {
+          font-family: inherit;
+          font-size: 1rem;
+          font-weight: 400;
+          line-height: inherit;
+          width: 100%;
+          height: auto;
+          padding: 0.75rem 1.25rem;
+          border: none;
+          outline: none;
+          border-radius: 2rem;
+          color: $black100;
+          background: $black12;
+          text-transform: unset;
+          text-rendering: optimizeLegibility;
+        }
+
+        .input-submit {
+          font-family: inherit;
+          font-size: 1rem;
+          font-weight: 500;
+          line-height: inherit;
+          cursor: pointer;
+          min-width: 40%;
+          height: auto;
+          padding: 0.65rem 1.25rem;
+          border: none;
+          outline: none;
+          border-radius: 2rem;
+          color: $white-color;
+          background: $primary-color;
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+            0 2px 4px -1px rgba(0, 0, 0, 0.06);
+          text-transform: capitalize;
+          text-rendering: optimizeLegibility;
+        }
+      }
+
+      .striped {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem 0;
+
+        &-line {
+          flex: auto;
+          flex-basis: auto;
+          border: none;
+          outline: none;
+          height: 2px;
+          background: #dadce0;
+        }
+
+        &-text {
+          font-family: inherit;
+          font-size: 1rem;
+          font-weight: 500;
+          line-height: inherit;
+          color: $black100;
+          margin: 0 1rem;
+        }
+      }
+
+      .method {
+        &-control {
+          margin-bottom: 1rem;
+        }
+
+        &-action {
+          font-family: inherit;
+          font-size: 0.95rem;
+          font-weight: 500;
+          line-height: inherit;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: auto;
+          padding: 0.35rem 1.25rem;
+          outline: none;
+          border: 2px solid #dadce0;
+          border-radius: 2rem;
+          color: $black100;
+          background: $white-color;
+          text-transform: capitalize;
+          text-rendering: optimizeLegibility;
+          transition: all 0.35s ease;
+
+          &:hover {
+            background: #f1f5f9;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375.98px) {
+  .modal {
+    .modal_body {
+      .toSignIn {
+        padding: 2rem 1.5rem;
+      }
+    }
+  }
+}

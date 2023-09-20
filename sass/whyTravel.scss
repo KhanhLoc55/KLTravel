@@ -1,0 +1,152 @@
+.whyTravel {
+  margin-top: 64px;
+
+  .heading-travel {
+    text-align: center;
+    margin-bottom: 12px;
+
+    color: $black100;
+    /* lora/heading 1 */
+    font-family: $primary-font;
+    font-size: 51px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 61.2px */
+  }
+  .whyTravel-title {
+    margin-bottom: 24px;
+    padding: 0 280px;
+    color: $secondary-color;
+    text-align: center;
+    font-family: $primary-font;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 25.5px */
+    letter-spacing: 0.15px;
+  }
+  .background-card-content {
+    background: $primary-color;
+    margin-top: 105px;
+    height: 350px;
+    position: relative;
+    border-radius: 175px 175px 0px 0px;
+
+    .card-content {
+      position: absolute;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      .card {
+        min-width: 305px;
+        background-color: $white-color;
+        border-radius: 8px 8px 0px 0px;
+
+        img {
+          margin-bottom: 16px;
+        }
+        .hedding {
+          margin: 16px 8px 16px 8px;
+          .hedding-h1 {
+            color: $black100;
+            /* lora/heading 4 */
+            font-family: $primary-font;
+            font-size: 21px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%; /* 25.2px */
+            letter-spacing: 0.15px;
+            margin-bottom: 8px;
+          }
+          .card-title {
+            color: $black38;
+            font-family: $secondary-font;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%; /* 24px */
+            letter-spacing: 0.08px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .whyTravel {
+    .container {
+      .whyTravel-title {
+        padding: 0 80px;
+      }
+      .background-card-content {
+        height: 340px;
+        .card-content {
+          top: 40%;
+          gap: 10px;
+          .card {
+            border: $black38 0.5px solid;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768.98px) {
+  .whyTravel {
+    .container {
+      margin: 0 40px;
+      .heading-travel {
+        font-size: 40px;
+      }
+      .whyTravel-title {
+        padding: 0 10px;
+      }
+      .background-card-content {
+        height: 650px;
+        .card-content {
+          grid-template-columns: repeat(2, 1fr);
+          top: 50%;
+          gap: 10px;
+
+          .card2 {
+            translate: 175px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600.98px) {
+  .whyTravel {
+    .container {
+      margin: 0 20px;
+      .heading-travel {
+        font-size: 36px;
+      }
+      .whyTravel-title {
+        padding: 0;
+      }
+      .background-card-content {
+        height: 1000px;
+        .card-content {
+          grid-template-columns: 1fr;
+          gap: 10px;
+          top: 50%;
+
+          .card {
+            border: $black38 0.5px solid;
+          }
+          .card2 {
+            translate: none;
+          }
+        }
+      }
+    }
+  }
+}

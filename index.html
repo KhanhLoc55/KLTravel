@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="x-icon" href="image/klAppIcon.ico" />
+    <title>KLTravel</title>
+    <!-- google font link  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/app.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="header-main">
+            <img src="./image/KL-textLogo.png" alt="" />
+            <nav class="menu">
+              <ul class="menu-list">
+                <li class="menu-item">
+                  <a href="index.html" class="menu-link active">Home</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#about" class="menu-link">About</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#tour" class="menu-link">Tour</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#places" class="menu-link">Places</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#services" class="menu-link">Services</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#contact" class="menu-link">Contact</a>
+                </li>
+              </ul>
+            </nav>
+            <i class="fa fa-bars menu-toggle"></i>
+            <div class="btn">
+              <button class="btn-SignUp">Sign Up</button>
+              <button class="btn-Login" id="btnLogin">Login</button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- modal -->
+      <section class="modal">
+        <div class="modal_overlay"></div>
+        <div class="modal_body">
+          <div class="toSignIn">
+            <img src="image/close.svg" alt="" class="close" />
+            <div class="heading">
+              <h1 class="text text-large">Sign In</h1>
+              <p class="text text-normal">
+                New user?
+                <span
+                  ><a href="#" class="text text-links"
+                    >Create an account</a
+                  ></span
+                >
+              </p>
+            </div>
+            <form name="signin" class="form">
+              <div class="input-control">
+                <label for="email" class="input-label" hidden
+                  >Email Address</label
+                >
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="input-field"
+                  placeholder="Email Address"
+                />
+              </div>
+              <div class="input-control">
+                <label for="password" class="input-label" hidden
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  class="input-field"
+                  placeholder="Password"
+                />
+              </div>
+              <div class="input-control">
+                <a href="#" class="text text-links">Forgot Password</a>
+                <input
+                  type="submit"
+                  name="submit"
+                  class="input-submit"
+                  value="Sign In"
+                  disabled
+                />
+              </div>
+            </form>
+            <div class="striped">
+              <span class="striped-line"></span>
+              <span class="striped-text">Or</span>
+              <span class="striped-line"></span>
+            </div>
+            <div class="method">
+              <div class="method-control">
+                <a href="#" class="method-action">
+                  <i class="fab fa-google ion ion-logo-google"></i>
+                  <span>Sign in with Google</span>
+                </a>
+              </div>
+              <div class="method-control">
+                <a href="#" class="method-action">
+                  <i class="fab fa-facebook ion ion-logo-facebook"></i>
+                  <span>Sign in with Facebook</span>
+                </a>
+              </div>
+              <div class="method-control">
+                <a href="#" class="method-action">
+                  <i class="fab fa-behance-square ion ion-logo-behance"></i>
+                  <span>Sign in with behance</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-image">
+        <div class="content-text">
+          <h4 class="content-title">Discover story-worthy</h4>
+          <div class="content-heading">
+            <span class="Contrast"> travel </span>
+            moments
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="199"
+              height="31"
+              viewBox="0 0 199 31"
+              fill="none"
+              class="line"
+            >
+              <path
+                d="M1.08646 29.976C1.0004 29.7519 1.14711 29.5146 1.43778 29.3927C60.6071 5.9155 133.781 -3.18261 197.327 10.8388C197.679 10.9194 197.899 11.1632 197.864 11.4263C197.827 11.5295 197.755 11.6161 197.659 11.6703C197.564 11.7244 197.453 11.7426 197.345 11.7215C132.22 5.01122 62.3096 7.50329 1.70143 30.1606C1.59389 30.2092 1.47243 30.2173 1.35942 30.1833C1.24641 30.1494 1.14945 30.0757 1.08646 29.976Z"
+                fill="#FFA726"
+              />
+              <path
+                d="M46.7104 25.1579C80.4569 14.7361 133.223 11.337 168.104 17.655C168.743 17.7696 168.526 18.4597 167.867 18.4011C132.429 15.2332 81.7373 18.4726 47.0351 25.872C46.3881 26.0097 46.0894 25.3491 46.7104 25.1579Z"
+                fill="#FFA726"
+              />
+              <path
+                d="M174.8 18.0737C177.181 17.9823 179.561 18.2986 181.836 19.0088C182.914 19.3548 182.554 20.52 181.352 20.5612C178.966 20.6572 176.581 20.3411 174.302 19.6269C173.239 19.2802 173.602 18.1147 174.8 18.0737Z"
+                fill="#FFA726"
+              />
+            </svg>
+          </div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="351"
+            height="3"
+            viewBox="0 0 351 3"
+            fill="none"
+            class="content-line"
+          >
+            <path
+              d="M1 0.858276C0.447715 0.858276 0 1.30599 0 1.85828C0 2.41056 0.447715 2.85828 1 2.85828V0.858276ZM1 2.85828H351V0.858276L1 0.858276V2.85828Z"
+              fill="white"
+            />
+          </svg>
+          <button class="btn-START">START TOURS</button>
+        </div>
+        <div class="from-content-image">
+          <div class="from-content">
+            <div class="from-card-going">
+              <h5>Where to</h5>
+              <label class="input-wrapper">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="25"
+                  viewBox="0 0 24 25"
+                  fill="none"
+                  class="goging"
+                >
+                  <path
+                    d="M11.7548 6.74329C11.0717 6.74329 10.4038 6.94587 9.83579 7.32542C9.26776 7.70497 8.82503 8.24443 8.56359 8.8756C8.30215 9.50677 8.23375 10.2013 8.36703 10.8713C8.50031 11.5414 8.82929 12.1568 9.31236 12.6399C9.79544 13.123 10.4109 13.452 11.081 13.5852C11.751 13.7185 12.4455 13.6501 13.0767 13.3887C13.7078 13.1273 14.2473 12.6845 14.6269 12.1165C15.0064 11.5485 15.209 10.8806 15.209 10.1975C15.209 9.28135 14.8451 8.40277 14.1973 7.75499C13.5495 7.10721 12.6709 6.74329 11.7548 6.74329ZM11.7548 12.5608C11.2874 12.5608 10.8305 12.4222 10.4418 12.1625C10.0531 11.9028 9.75023 11.5337 9.57135 11.1019C9.39247 10.67 9.34567 10.1948 9.43686 9.73638C9.52805 9.27793 9.75314 8.85682 10.0837 8.52629C10.4142 8.19577 10.8353 7.97068 11.2938 7.87949C11.7522 7.7883 12.2274 7.8351 12.6593 8.01398C13.0911 8.19286 13.4602 8.49578 13.7199 8.88443C13.9796 9.27309 14.1182 9.73002 14.1182 10.1975C14.1182 10.8243 13.8692 11.4254 13.426 11.8686C12.9828 12.3118 12.3816 12.5608 11.7548 12.5608ZM11.7548 2.38013C9.68228 2.38253 7.69531 3.20691 6.2298 4.67243C4.76429 6.13794 3.93991 8.12491 3.9375 10.1975C3.9375 13.0071 5.24099 15.9914 7.70709 18.8274C8.82016 20.1138 10.0729 21.2723 11.4421 22.2816C11.5338 22.3457 11.643 22.3801 11.7548 22.3801C11.8667 22.3801 11.9759 22.3457 12.0675 22.2816C13.4368 21.2723 14.6895 20.1138 15.8026 18.8274C18.2687 15.9914 19.5722 13.0099 19.5722 10.1975C19.5697 8.12491 18.7454 6.13794 17.2799 4.67243C15.8143 3.20691 13.8274 2.38253 11.7548 2.38013ZM11.7548 21.1517C10.3913 20.0991 5.02829 15.6169 5.02829 10.1975C5.02829 8.41347 5.73698 6.70254 6.99845 5.44107C8.25992 4.1796 9.97084 3.47092 11.7548 3.47092C13.5388 3.47092 15.2497 4.1796 16.5112 5.44107C17.7727 6.70254 18.4814 8.41347 18.4814 10.1975C18.4814 15.6169 13.1183 20.0991 11.7548 21.1517Z"
+                    fill="black"
+                    fill-opacity="0.54"
+                  />
+                </svg>
+                <input type="text" placeholder="Going to" class="input" />
+              </label>
+            </div>
+            <div class="from-card-date">
+              <h5>Date</h5>
+              <label class="input-wrapper">
+                <input type="date" class="input" />
+              </label>
+            </div>
+            <button class="btn-Srearch">Srearch</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="topDeal">
+        <div class="container">
+          <div class="topDeal-content">
+            <div class="topDeal-text">
+              <h1 class="topDeal-heading">Top Deals</h1>
+              <h5 class="topDeal-title">An experience offer for you</h5>
+            </div>
+            <div class="topDeal-icon">
+              <div class="icon-right" onclick="plusDivs(-1)">
+                <!-- Biểu tượng chuyển sang phải -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  class="iconRight"
+                >
+                  <path
+                    d="M40 17.9999L40 29.9999L24 29.9999L24 39.6799L8.32 23.9999L24 8.31995L24 17.9999L40 17.9999Z"
+                    fill="#FFA726"
+                  />
+                </svg>
+              </div>
+              <div class="icon-left" onclick="plusDivs(1)">
+                <!-- Biểu tượng chuyển sang trái -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  class="iconLeft"
+                >
+                  <path
+                    d="M8 30.0001L8 18.0001L24 18.0001L24 8.32005L39.68 24.0001L24 39.6801L24 30.0001L8 30.0001Z"
+                    fill="#FFA726"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="img-content">
+            <!-- Thêm class 'mySlides' cho các ảnh -->
+            <img class="mySlides" src="image/bannerTour1.png" />
+            <img class="mySlides" src="image/bannerTour3.png" />
+            <img class="mySlides" src="image/bannerTravel2.png" />
+          </div>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <div class="container">
+          <div class="about-content">
+            <div class="about-text">
+              <h1>About Us</h1>
+              <h5>KL&lt;webDesign /&gt; Vietnam's Premier Travel Agency.</h5>
+              <p>
+                KL&lt;webDesign /&gt; embraces the mission of helping our valued
+                customers "unleash exploration, live passions" in new
+                territories, accompanied by top-notch service quality.
+              </p>
+              <p>
+                Our KL&lt;webDesign /&gt; team consists of meticulously selected
+                and professionally trained individuals with a wealth of
+                experience in the field of travel services. Committed to
+                unwavering honesty, we strive to deliver tangible value and
+                serve wholeheartedly and attentively.
+              </p>
+              <div class="about-read">
+                <h2>Read more about us</h2>
+                <div>
+                  <div class="icon-container" onclick="toggleIcon()">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="42"
+                      height="23"
+                      viewBox="0 0 42 23"
+                      fill="none"
+                      class="about-icon-arow"
+                    >
+                      <path
+                        d="M41.0607 12.5607C41.6464 11.9749 41.6464 11.0251 41.0607 10.4393L31.5147 0.893398C30.9289 0.307611 29.9792 0.307611 29.3934 0.893398C28.8076 1.47919 28.8076 2.42893 29.3934 3.01472L37.8787 11.5L29.3934 19.9853C28.8076 20.5711 28.8076 21.5208 29.3934 22.1066C29.9792 22.6924 30.9289 22.6924 31.5147 22.1066L41.0607 12.5607ZM0 13H40V10H0V13Z"
+                        fill="#FFA726"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="about-image">
+              <div class="image-content">
+                <img
+                  class="mySlidesAbout"
+                  src="image/phanthiet.jpg"
+                  style="display: none"
+                />
+                <img class="mySlidesAbout" src="image/Rectangle.png" />
+                <img
+                  class="mySlidesAbout"
+                  src="image/tiengiang.jpg"
+                  style="display: none"
+                />
+
+                <div class="about-image-small-content">
+                  <img
+                    class="aboutImageSmall w3-opacity w3-hover-opacity-off"
+                    src="image/phanthiet.jpg"
+                    onclick="currentDivAbout(1)"
+                  />
+                  <img
+                    class="aboutImageSmall w3-opacity w3-hover-opacity-off"
+                    src="image/Rectangle.png"
+                    onclick="currentDivAbout(2)"
+                  />
+                  <img
+                    class="aboutImageSmall w3-opacity w3-hover-opacity-off"
+                    src="image/tiengiang.jpg"
+                    onclick="currentDivAbout(3)"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="tour" id="tour">
+        <div class="container">
+          <h1 class="tour-heading">Tour</h1>
+          <div class="tour-cards">
+            <div class="card">
+              <div class="card-image">
+                <img src="/image/vuTau.png" alt="vuTau" />
+                <div class="card-text-everyday">Everyday</div>
+              </div>
+              <div class="card-content">
+                <div class="card-text">
+                  Vũng Tàu
+                  <img
+                    class="icon-heart"
+                    src="image/iconheart.svg"
+                    alt="iconheart"
+                  />
+                </div>
+                <div class="card-title-small">15 day</div>
+                <div class="card-from">
+                  From <span class="Contrast">$1000</span> / Person
+                </div>
+                <div class="card-star">
+                  <div class="icon-star">
+                    <img src="image/Iconstar.svg" alt="" />
+                    <img src="image/Iconstar.svg" alt="" />
+                    <img src="image/Iconstar.svg" alt="" />
+                    <img src="image/Iconstar.svg" alt="" />
+                    <img src="image/Iconstar.svg" alt="" />
+                  </div>
+                  <div class="card-text-review">1604 review</div>
+                </div>
+                <button class="btn">View</button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-image">
+                <img src="/image/hanoi.png" alt="vuTau" />
+                <div class="card-text-everyday">Everyday</div>
+              </div>
+              <div class="card-content">
+                <div class="card-text">
+                  Hà Nội
+                  <img
+                    class="icon-heart"
+                    src="image/iconheart.svg"
+                    alt="iconheart"
+                  />
+                </div>
+                <div class="card-title-small">12 day</div>
+                <div class="card-from">
+                  From <span class="Contrast">$2000</span> / Person
+                </div>
+                <div class="card-star">
+                  <div class="icon-star">
+                    <img src="image/Iconstar.svg" alt="" />
+                    <img src="image/Iconstar.svg" alt="" />
+                    <img src="image/Iconstar.svg" alt="" />
+                    <img src="image/Iconstar.svg" alt="" />
+                    <img src="image/iconStarSecondary.svg" alt="" />
+                  </div>
+                  <div class="card-text-review">244 review</div>
+                </div>
+                <button class="btn">View</button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-image">
+                <img src="/image/quangninh.png" alt="vuTau" />
+                <div class="card-text-everyday">Everyday</div>
+              </div>
+              <div class="card-content">
+                <div class="card-text">
+                  Quảng Ninh
+                  <img
+                    class="icon-heart"
+                    src="image/iconheart.svg"
+                    alt="iconheart"
+                  />
+                </div>
+                <div class="card-title-small">20 day</div>
+                <div class="card-from">
+                  From <span class="Contrast">$3000</span> / Person
+                </div>
+                <div class="card-star">
+                  <div class="icon-star">
+                    <img src="image/Iconstar.svg" alt="" />
+                    <img src="image/Iconstar.svg" alt="" />
+                    <img src="image/iconStarSecondary.svg" alt="" />
+                    <img src="image/iconStarSecondary.svg" alt="" />
+                    <img src="image/iconStarSecondary.svg" alt="" />
+                  </div>
+                  <div class="card-text-review">1604 review</div>
+                </div>
+                <button class="btn">View</button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-image">
+                <img src="/image/phuQuoc.png" alt="vuTau" />
+                <div class="card-text-everyday">Everyday</div>
+              </div>
+              <div class="card-content">
+                <div class="card-text">
+                  Phú Quốc
+                  <img
+                    class="icon-heart"
+                    src="image/iconheart.svg"
+                    alt="iconheart"
+                  />
+                </div>
+                <div class="card-title-small">17 day</div>
+                <div class="card-from">
+                  From <span class="Contrast">$1500</span> / Person
+                </div>
+                <div class="card-star">
+                  <div class="icon-star">
+                    <img src="image/Iconstar.svg" alt="" />
+                    <img src="image/Iconstar.svg" alt="" />
+                    <img src="image/Iconstar.svg" alt="" />
+                    <img src="image/iconStarSecondary.svg" alt="" />
+                    <img src="image/iconStarSecondary.svg" alt="" />
+                  </div>
+                  <div class="card-text-review">664 review</div>
+                </div>
+                <button class="btn">View</button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-image">
+                <img src="/image/canTho.png" alt="vuTau" />
+                <div class="card-text-everyday">Everyday</div>
+              </div>
+              <div class="card-content">
+                <div class="card-text">
+                  Cần Thơ
+                  <img
+                    class="icon-heart"
+                    src="image/iconheart.svg"
+                    alt="iconheart"
+                  />
+                </div>
+                <div class="card-title-small">18 day</div>
+                <div class="card-from">
+                  From <span class="Contrast">$2500</span> / Person
+                </div>
+                <div class="card-star">
+                  <div class="icon-star">
+                    <img src="image/Iconstar.svg" alt="" />
+                    <img src="image/Iconstar.svg" alt="" />
+                    <img src="image/Iconstar.svg" alt="" />
+                    <img src="image/Iconstar.svg" alt="" />
+                    <img src="image/iconStarSecondary.svg" alt="" />
+                  </div>
+                  <div class="card-text-review">1764 review</div>
+                </div>
+                <button class="btn">View</button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-image">
+                <img src="/image/SaiGon.png" alt="vuTau" />
+                <div class="card-text-everyday">Everyday</div>
+              </div>
+              <div class="card-content">
+                <div class="card-text">
+                  Sài Gòn
+                  <img
+                    class="icon-heart"
+                    src="image/iconheart.svg"
+                    alt="iconheart"
+                  />
+                </div>
+                <div class="card-title-small">10 day</div>
+                <div class="card-from">
+                  From <span class="Contrast">$3000</span> / Person
+                </div>
+                <div class="card-star">
+                  <div class="icon-star">
+                    <img src="image/Iconstar.svg" alt="" />
+                    <img src="image/Iconstar.svg" alt="" />
+                    <img src="image/Iconstar.svg" alt="" />
+                    <img src="image/Iconstar.svg" alt="" />
+                    <img src="image/Iconstar.svg" alt="" />
+                  </div>
+                  <div class="card-text-review">1604 review</div>
+                </div>
+                <button class="btn">View</button>
+              </div>
+            </div>
+          </div>
+          <button class="btn-seeMore" id="seeMore">See more</button>
+        </div>
+      </section>
+      <section class="places" id="places">
+        <div class="container">
+          <h1>PLACES TO GO</h1>
+          <p>Where are you off to “ I am going on an adventure”</p>
+          <div class="place-img">
+            <div class="img-content">
+              <div class="overlay-img">
+                <div class="square"></div>
+                <div class="text">Sài Gòn</div>
+              </div>
+              <img src="image/placeSaiGon.png" alt="" />
+            </div>
+            <div class="img-content">
+              <div class="overlay-img">
+                <div class="square"></div>
+                <div class="text">Cần Thơ</div>
+              </div>
+              <img src="image/place23.png" alt="" />
+            </div>
+            <div class="img-content">
+              <div class="overlay-img">
+                <div class="square"></div>
+                <div class="text">Bình Dương</div>
+              </div>
+              <img src="image/place24.png" alt="" />
+            </div>
+            <div class="img-content">
+              <div class="overlay-img">
+                <div class="square"></div>
+                <div class="text">Đà Nẵng</div>
+              </div>
+              <img src="image/place25.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="whyTravel" id="services">
+        <div class="container">
+          <h1 class="heading-travel">Why travel with us</h1>
+          <p class="whyTravel-title">
+            We always strive to go beyond limits to ensure your journey becomes
+            an extraordinary experience, just as you've envisioned. Here are the
+            ways, both big and small, that we implement to make your vacation
+            more special than ever.
+          </p>
+          <div class="background-card-content">
+            <div class="card-content">
+              <div class="card">
+                <img src="image/whyTravel1.png" alt="" />
+                <div class="hedding">
+                  <h1 class="hedding-h1">Great journey</h1>
+                  <p class="card-title">
+                    Our tours strike a perfect balance between immersive,
+                    exclusive CIE experiences and ample leisure time for you to
+                    explore and savor on your own
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <img src="image/whytravel2.png" alt="" />
+                <div class="hedding">
+                  <h1 class="hedding-h1">All in price</h1>
+                  <p class="card-title">
+                    Tour prices include everything: entertainment, experiences,
+                    full breakfasts, and most dinners. No hidden fees or
+                    upselling.
+                  </p>
+                </div>
+              </div>
+              <div class="card card2">
+                <img src="image/whytravel3.png" alt="" />
+                <div class="hedding">
+                  <h1 class="hedding-h1">Reliability & experience</h1>
+                  <p class="card-title">
+                    With almost 90 years of travel experience, our trips are
+                    backed by a consumer protection bond for complete traveler
+                    coverage.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contact" id="contact">
+        <div class="container">
+          <div class="contact-content">
+            <div class="contact-content-text">
+              <h1 class="contact-heading">Contact us</h1>
+              <p class="contact-title">
+                Enim tempor eget pharetra facilisis sed maecenas adipiscing. Eu
+                leo molestie vel, ornare non id blandit netus.
+              </p>
+              <div class="contact-content-icon">
+                <div class="contact-icon">
+                  <img src="image/iphone-icon.svg" alt="" />
+                  <div class="contact-text">
+                    PHONE <br /><span>0839 857 129</span>
+                  </div>
+                </div>
+                <div class="contact-icon">
+                  <img src="image/fax-icon.svg" alt="" />
+                  <div class="contact-text">
+                    FAX <br /><span> 0839 857 129</span>
+                  </div>
+                </div>
+                <div class="contact-icon">
+                  <img src="image/email-icon.svg" alt="" />
+                  <div class="contact-text">
+                    EMAIL <br /><span> anhlamot55@gmail.com</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="contact-google">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8067.440894852708!2d106.67252301173458!3d10.81985450255583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528e29dd507f7%3A0x948d76a144ff8eb5!2zTmd1eeG7hW4gVsSDbiBDw7RuZywgUGjGsOG7nW5nIDMsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1694598361307!5m2!1svi!2s"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                class="gooogle"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="contact-line"></div>
+      </section>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-content">
+            <div class="footer-logo-one">
+              <img src="image/KL-textLogo 1.png" alt="" class="footer-logo" />
+              <p class="footer-text-one">
+                Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam
+              </p>
+              <div class="footer-icon-one">
+                <a
+                  class="footer-icon"
+                  target="_blank"
+                  href="https://www.facebook.com/loc.nguyenkhanh.566"
+                >
+                  <img
+                    class="img-icon-footer"
+                    src="image/Facebook.svg"
+                    alt=""
+                  />
+                </a>
+                <a
+                  class="footer-icon"
+                  target="_blank"
+                  href="https://www.behance.net/anhlamot55"
+                >
+                  <img class="img-icon-footer" src="image/behance.svg" alt="" />
+                </a>
+                <a
+                  class="footer-icon"
+                  target="_blank"
+                  href="https://github.com/KhanhLoc55"
+                >
+                  <img class="img-icon-footer" src="image/git.svg" alt="" />
+                </a>
+                <a
+                  class="footer-icon"
+                  target="_blank"
+                  href="https://www.linkedin.com/in/loc-nguyenkhanh-927b0822a/"
+                >
+                  <img class="img-icon-footer" src="image/LinkedIn.svg" />
+                </a>
+              </div>
+            </div>
+            <div class="footer-product-two">
+              <div class="footer-Product">Product</div>
+              <div class="footer-text-two">Features</div>
+              <div class="footer-text-two">Pricing</div>
+              <div class="footer-text-two">Case studies</div>
+              <div class="footer-text-two">Reviews</div>
+              <div class="footer-text-two">Updates</div>
+            </div>
+            <div class="footer-Company-three">
+              <div class="footer-Company">Company</div>
+              <div class="footer-text-three">About</div>
+              <div class="footer-text-three">Contact us</div>
+              <div class="footer-text-three">Careers</div>
+              <div class="footer-text-three">Culture</div>
+              <div class="footer-text-three">Blog</div>
+            </div>
+            <div class="footer-Support-four">
+              <div class="footer-Support">Support</div>
+              <div class="footer-text-four">Getting started</div>
+              <div class="footer-text-four">Help center</div>
+              <div class="footer-text-four">Server status</div>
+              <div class="footer-text-four">Report a bug</div>
+              <div class="footer-text-four">Chat support</div>
+            </div>
+            <div class="footer-ContactsUs-five">
+              <div class="footer-ContactsUs">Contacts us</div>
+
+              <div class="footer-text-five">
+                <img src="image/email-icon.svg" alt="" class="icon-five" />
+                anhlamot55@gmail.com
+              </div>
+              <div class="footer-text-five">
+                <img src="image/iphone-icon.svg" alt="" class="icon-five" />
+                0839 851 729
+              </div>
+            </div>
+          </div>
+          <div class="footer-slide">
+            <div class="slide">
+              <img class="img-footer-slide" src="image/Infinite1.svg" alt="" />
+              <img class="img-footer-slide" src="image/Infinite2.svg" alt="" />
+              <img class="img-footer-slide" src="image/Infinite3.svg" alt="" />
+              <img class="img-footer-slide" src="image/Infinite4.svg" alt="" />
+              <img class="img-footer-slide" src="image/Infinite5.svg" alt="" />
+              <img class="img-footer-slide" src="image/Infinite1.svg" alt="" />
+              <img class="img-footer-slide" src="image/Infinite2.svg" alt="" />
+              <img class="img-footer-slide" src="image/Infinite3.svg" alt="" />
+              <img class="img-footer-slide" src="image/Infinite4.svg" alt="" />
+              <img class="img-footer-slide" src="image/Infinite5.svg" alt="" />
+              <img class="img-footer-slide" src="image/Infinite1.svg" alt="" />
+              <img class="img-footer-slide" src="image/Infinite2.svg" alt="" />
+              <img class="img-footer-slide" src="image/Infinite3.svg" alt="" />
+              <img class="img-footer-slide" src="image/Infinite4.svg" alt="" />
+              <img class="img-footer-slide" src="image/Infinite5.svg" alt="" />
+              <img class="img-footer-slide" src="image/Infinite1.svg" alt="" />
+              <img class="img-footer-slide" src="image/Infinite2.svg" alt="" />
+              <img class="img-footer-slide" src="image/Infinite3.svg" alt="" />
+              <img class="img-footer-slide" src="image/Infinite4.svg" alt="" />
+              <img class="img-footer-slide" src="image/Infinite5.svg" alt="" />
+            </div>
+          </div>
+          <div class="footer-line"></div>
+          <div class="footer-text-title">
+            <h1 class="footer-heading-left">KL 20/09/2023</h1>
+            <h1 class="footer-heading-right">
+              Hi |
+              <span
+                ><a href="https://klweb-portfolio.netlify.app/" target="_blank"
+                  >My Portfolio</a
+                ></span
+              >
+              |
+              <span
+                ><a href="https://github.com/KhanhLoc55" target="_blank"
+                  >My Github</a
+                ></span
+              >
+            </h1>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./script/app.js"></script>
+  </body>
+</html>

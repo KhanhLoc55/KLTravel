@@ -1,0 +1,133 @@
+.topDeal {
+  margin-top: 150px;
+
+  .topDeal-content {
+    display: flex;
+    justify-content: space-between;
+
+    .topDeal-text {
+      .topDeal-heading {
+        color: $primary-color;
+        /* lora/heading 3 */
+        font-family: $primary-font;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%; /* 31.2px */
+        margin-bottom: 8px;
+      }
+
+      .topDeal-title {
+        color: $secondary-color;
+        /* lora/subtitle */
+        font-family: $primary-font;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%; /* 20.4px */
+        letter-spacing: 0.15px;
+        margin-bottom: 24px;
+      }
+    }
+
+    .topDeal-icon {
+      display: flex;
+
+      .icon-right {
+        &:hover {
+          width: 48px;
+          height: 48px;
+          background-color: #fff;
+          filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25))
+            drop-shadow(-2px 0px 4px rgba(0, 0, 0, 0.25));
+        }
+      }
+
+      .icon-left {
+        &:hover {
+          width: 48px;
+          height: 48px;
+          background-color: #fff;
+          filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25))
+            drop-shadow(-2px 0px 4px rgba(0, 0, 0, 0.25));
+        }
+      }
+    }
+  }
+  .img-content {
+    max-width: 100%;
+    box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);
+    .mySlides {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .topDeal {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 768.98px) {
+  .topDeal {
+    margin-top: 150px;
+    .container {
+      margin: 0 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 600.98px) {
+  .topDeal {
+    margin-top: 56px;
+  }
+}
+
+@media screen and (max-width: 414.98px) {
+  .topDeal {
+    margin-top: 0;
+    .container {
+      margin: 0 20px;
+      .topDeal-content {
+        .topDeal-text {
+          .topDeal-heading {
+            font-size: 24px;
+          }
+          .topDeal-title {
+            font-size: 14px;
+          }
+        }
+        .topDeal-icon {
+          .icon-right {
+            .iconRight {
+              width: 40px;
+              height: 40px;
+            }
+            &:hover {
+              width: 40px;
+              height: 40px;
+            }
+          }
+          .icon-left {
+            .iconLeft {
+              width: 40px;
+              height: 40px;
+            }
+            &:hover {
+              width: 40px;
+              height: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 375.98px) {
+  .topDeal {
+    .container {
+      margin: 0 12px;
+    }
+  }
+}

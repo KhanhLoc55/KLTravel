@@ -1,0 +1,265 @@
+.about {
+  margin-top: 80px;
+
+  .about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .about-text {
+      max-width: 44%;
+      h1 {
+        color: $black100;
+        /* lora/heading 1 */
+        font-family: $primary-font;
+        font-size: 51px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%; /* 61.2px */
+        margin-bottom: 8px;
+      }
+      h5 {
+        color: $secondary-color;
+        font-family: $primary-font;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%; /* 20.4px */
+        letter-spacing: 0.15px;
+        margin-bottom: 16px;
+      }
+      p {
+        color: $black38;
+        font-family: $secondary-font;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 180%; /* 28.8px */
+        letter-spacing: 0.08px;
+        margin-bottom: 24px;
+      }
+      .about-read {
+        display: flex;
+        h2 {
+          color: $primary-color;
+          /* lora/heading 4 */
+          font-family: $primary-font;
+          font-size: 21px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 120%; /* 25.2px */
+          letter-spacing: 0.15px;
+          margin-right: 16px;
+        }
+        .about-icon-arow {
+          width: 42px;
+          height: 23px;
+          transition: width 0.3s, height 0.3s; /* Áp dụng hiệu ứng chuyển đổi cho width và height */
+          cursor: pointer;
+        }
+      }
+    }
+    .about-image {
+      max-width: 54%;
+
+      .image-content {
+        .mySlidesAbout {
+          height: 342px;
+          width: 100%;
+          margin-bottom: 12px;
+          border-radius: 8px;
+        }
+        .about-image-small-content {
+          display: flex;
+          justify-content: space-between;
+          .aboutImageSmall {
+            border-radius: 4px;
+
+            width: calc(
+              (100% / 3) - 8px
+            ); /* 8px là khoảng cách giữa các hình */
+            height: 160px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .about {
+    .about-content {
+      .about-text {
+        h1 {
+          font-size: 36px;
+        }
+        h5 {
+          font-size: 15px;
+        }
+        p {
+          font-size: 14px;
+          line-height: 170%;
+        }
+      }
+      .about-image {
+        .image-content {
+          .mySlidesAbout {
+            height: 280px;
+          }
+          .about-image-small-content {
+            .aboutImageSmall {
+              max-height: 130px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768.98px) {
+  .about {
+    margin-top: 64px;
+
+    .container {
+      margin: 0 40px;
+      .about-content {
+        display: block;
+        .about-text {
+          max-width: 100%;
+          h1 {
+            font-size: 51px;
+          }
+          h5 {
+            font-size: 17px;
+            margin-bottom: 20px;
+          }
+          p {
+            font-size: 16px;
+            line-height: 180%;
+          }
+          .about-read {
+            justify-content: center;
+            margin-bottom: 24px;
+          }
+        }
+        .about-image {
+          max-width: 100%;
+
+          .image-content {
+            .mySlidesAbout {
+              height: 280px;
+            }
+            .about-image-small-content {
+              .aboutImageSmall {
+                max-height: 130px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 600.98px) {
+  .about {
+    margin-top: 56px;
+
+    .container {
+      .about-content {
+        .about-text {
+          h1 {
+            font-size: 40px;
+          }
+          h5 {
+            font-size: 17px;
+            margin-bottom: 20px;
+          }
+          p {
+          }
+          .about-read {
+          }
+        }
+        .about-image {
+          .image-content {
+            .mySlidesAbout {
+            }
+            .about-image-small-content {
+              .aboutImageSmall {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 414.98px) {
+  .about {
+    margin-top: 48px;
+    .container {
+      margin: 0 20px;
+      .about-content {
+        .about-text {
+          h1 {
+            font-size: 36px;
+          }
+          h5 {
+            font-size: 17px;
+            margin-bottom: 20px;
+          }
+          p {
+          }
+          .about-read {
+          }
+        }
+        .about-image {
+          .image-content {
+            .mySlidesAbout {
+              height: 200px;
+            }
+            .about-image-small-content {
+              .aboutImageSmall {
+                max-height: 90px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 375.98px) {
+  .about {
+    .container {
+      margin: 0 12px;
+
+      .about-content {
+        .about-text {
+          h1 {
+            font-size: 30px;
+          }
+          h5 {
+          }
+          p {
+          }
+          .about-read {
+          }
+        }
+        .about-image {
+          .image-content {
+            .mySlidesAbout {
+              height: 200px;
+            }
+            .about-image-small-content {
+              .aboutImageSmall {
+                max-height: 90px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
